@@ -1,0 +1,40 @@
+.videos {
+  background-color: #f1f1f1;
+  padding-bottom: 30px;
+}
+
+.text {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.videoGrid {
+  height: 100%;
+  background-color: #f1f1f1;
+  margin: 20px 0;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.video {
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  border: 5px solid #25b60f;
+}
+
+.video:hover {
+  border: 5px solid #000;
+}
+
+/* Optional: Make sure videos stack on small screens */
+@media (max-width: 768px) {
+  .video {
+    max-width: 100%;
+  }
+}

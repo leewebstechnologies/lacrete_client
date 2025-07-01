@@ -1,0 +1,21 @@
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+.portfolio {
+ background-color: #f1f1f1;
+}
+.text {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}

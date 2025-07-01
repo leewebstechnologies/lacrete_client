@@ -1,0 +1,167 @@
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+/* app/blog-section/BlogSection.module.css */
+.section {
+  width: 100%;
+}
+
+.bgLight {
+  background-color: #f8f9fa;
+}
+
+.py5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.sectionHeader {
+  margin-bottom: 2rem;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.pt3 {
+  padding-top: 1rem;
+}
+
+.colMd4 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .colMd4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.border0 {
+  border: 0;
+}
+
+.cardImgTop {
+  width: 100%;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+  overflow: hidden;
+}
+
+.imgFluid {
+  max-width: 100%;
+  height: 100px;
+}
+
+.cardBody {
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.cardTitle {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.cardText {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btnPrimary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btnPrimary:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}

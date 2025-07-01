@@ -1,0 +1,56 @@
+.welcome {
+  display: flex;
+  background-color: #f1f1f1;
+}
+
+.banner3 {
+  height: max-content;
+  flex: 1;
+}
+
+.years {
+  margin: 20px;
+  flex: 1;
+}
+
+.line {
+  border: 2px solid #25b60f;
+  margin-top: 2px;
+  width: 10%;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+}
+
+.icon {
+  margin-left: 10px;
+}
+
+.circle-arrow {
+  margin-right: 100px;
+}
+
+.text {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .welcome {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .years {
+    margin: 10px 10px;
+    }
+
+  .banner3 {
+    width: 100%;
+    }
+  }
+
+

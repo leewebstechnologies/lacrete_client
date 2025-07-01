@@ -1,0 +1,32 @@
+.experience {
+  display: flex;
+  background-color: #25b60f;
+  padding: 40px;
+  justify-content: space-between;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemIcon {
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 480px) {
+  .experience {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .text {
+    margin-left: 10px;
+  }
+}
