@@ -1,6 +1,32 @@
+"use client";
+
+import { useRef, useState } from "react";
 import styles from "./page.module.css";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [done, setDone] = useState(false);
+
+  const formRef = useRef<HTMLFormElement | null>(null);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (formRef.current) {
+      emailjs
+        .sendForm("service_2bwa8bq", "template_nx6tqat", formRef.current, {
+          publicKey: "D7s2QtY9npU46KDNG",
+        })
+        .then(
+          () => {
+            console.log("SUCCESS!");
+            setDone(true);
+          },
+          (error: { text: string }) => {
+            console.log("FAILED...", error.text);
+          }
+        );
+    }
+  }
   return (
     <>
       <div className={styles.contactContainer}>
@@ -13,7 +39,7 @@ const Contact = () => {
         <div className={styles.contactContent}>
           <div className={styles.contactForm}>
             <h2>Send Us a Message</h2>
-            <form>
+            <form ref={formRef} onSubmit={handleSubmit}>
               <div className={styles.formGroup}>
                 <label htmlFor="name">Full Name</label>
                 <input
@@ -21,6 +47,7 @@ const Contact = () => {
                   id="name"
                   placeholder="Your full name"
                   required
+                  name="user_name"
                 />
               </div>
               <div className={styles.formGroup}>
@@ -30,6 +57,7 @@ const Contact = () => {
                   id="email"
                   placeholder="you@example.com"
                   required
+                  name="user_email"
                 />
               </div>
               <div className={styles.formGroup}>
@@ -39,6 +67,7 @@ const Contact = () => {
                   id="subject"
                   placeholder="Subject of your message"
                   required
+                  name="user_subject"
                 />
               </div>
               <div className={styles.formGroup}>
@@ -49,11 +78,17 @@ const Contact = () => {
                   placeholder="Type your message here..."
                   required
                   defaultValue={""}
+                  name="message"
                 />
               </div>
               <button type="submit" className={styles.submitBtn}>
                 Send Message
               </button>
+              {done && (
+                <p className={styles.successMessage}>
+                  Thank you! Your message has been sent successfully.
+                </p>
+              )}
             </form>
           </div>
           <div className={styles.contactInfo}>
