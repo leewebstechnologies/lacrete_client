@@ -35,7 +35,7 @@ const Hero = () => {
         <div className="carousel-inner">
           {heroData.map((index) => (
             <div key={index.id} className="carousel-item active">
-              <Image src={index.image} className="d-block w-100" alt="" />
+              <Image src={index.image} className="d-block w-100" alt="image" />
               <div className="carousel-caption d-none d-md-block">
                 <h3>{index.title}</h3>
                 <p>{index.subtitle}</p>

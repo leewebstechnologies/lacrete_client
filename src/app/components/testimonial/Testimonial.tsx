@@ -18,13 +18,11 @@ const Testimonial = () => {
               <div className={styles.testimonialAuthor}>
                 <Image
                   src={index.image}
-                  alt="Sarah Johnson"
+                  alt="client's avatar"
                   className={styles.authorImg}
                 />
                 <div className={styles.authorInfo}>
                   <h4 className={styles.name}>{index.name}</h4>
-                  <p className={styles.position}>{index.position}</p>
-                  <div className={styles.rating}>{index.rating}</div>
                 </div>
               </div>
             </div>

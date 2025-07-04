@@ -12,8 +12,6 @@ export type testimonial = {
   comment: string;
   image: StaticImageData;
   name: string;
-  position: string;
-  rating: string; 
 }
 
 export type team = {

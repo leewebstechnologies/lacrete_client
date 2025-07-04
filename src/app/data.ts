@@ -2,6 +2,7 @@ import banner1 from "../images/banner-1.jpg";
 import banner2 from "../images/banner-2.jpg";
 import banner3 from "../images/banner-3.jpg";
 import avatar from "../images/avatar.png";
+import avatar6 from "../images/avatar6.png";
 import member from "../images/testimonial3.jpg";
 import portfolio1 from "../images/1.png";
 import portfolio2 from "../images/2.png";
@@ -11,26 +12,26 @@ import portfolio5 from "../images/5.png";
 
 import { hero, testimonial, team, category } from "@/utils/type"; //Destructuring
 
-export const sliderData = [
-  {
-    id: 1,
-    title: "Welcome to Lacrete Concept Limited",
-    text: "Where Vision Meets Structure.",
-    image: "/images/banner-1.jpg",
-  },
-  {
-    id: 2,
-    title: "Welcome to Lacrete Concept Limited",
-    text: "Strength in Every Structure.",
-    image: "/images/banner-2.jpg",
-  },
-  {
-    id: 3,
-    title: "Welcome to Lacrete Concept Limited",
-    text: "Solid Foundations, Lasting Impressions.",
-    image: "/images/banner-3.jpg",
-  },
-];
+// export const sliderData = [
+//   {
+//     id: 1,
+//     title: "Welcome to Lacrete Concept Limited",
+//     text: "Where Vision Meets Structure.",
+//     image: "/images/banner-1.jpg",
+//   },
+//   {
+//     id: 2,
+//     title: "Welcome to Lacrete Concept Limited",
+//     text: "Strength in Every Structure.",
+//     image: "/images/banner-2.jpg",
+//   },
+//   {
+//     id: 3,
+//     title: "Welcome to Lacrete Concept Limited",
+//     text: "Solid Foundations, Lasting Impressions.",
+//     image: "/images/banner-3.jpg",
+//   },
+// ];
 
 export const heroData: hero[] = [
   {
@@ -57,29 +58,23 @@ export const testimonialData: testimonial[] = [
   {
     id: 1,
     comment:
-      "The service was absolutely fantastic! I was amazed by theattention to detail and the professionalism of the team. They delivered beyond my expectations",
+      "The service was absolutely fantastic! I was amazed by the attention to detail and the professionalism of the team. They delivered beyond my expectations",
     image: avatar,
-    name: "Ademola Ajibade",
-    position: "Marketing Director, TechCorp",
-    rating: "★★★★★",
+    name: "Alhaji Ibrahim",
   },
   {
     id: 2,
     comment:
-      "The service was absolutely fantastic! I was amazed by theattention to detail and the professionalism of the team. They delivered beyond my expectations",
-    image: avatar,
-    name: "Adeola Fayemi",
-    position: "Marketing Director, TechCorp",
-    rating: "★★★★★",
+      "They use quality materials and their team is very professional. I am extremely satisfied with the results of my project.",
+    image: avatar6,
+    name: "Kemi",
   },
   {
     id: 3,
     comment:
-      "The service was absolutely fantastic! I was amazed by theattention to detail and the professionalism of the team. They delivered beyond my expectations",
+      "I would recommend them to anyone looking for a reliable construction company. They were transparent throughout the process and delivered on time.",
     image: avatar,
-    name: "Sharon Ajibade",
-    position: "Marketing Director, TechCorp",
-    rating: "★★★★★",
+    name: "Demola",
   },
 ];
 
@@ -103,43 +98,6 @@ export const teamData: team[] = [
     position: "Construction Manager",
   },
 ];
-
-// export const services = [
-//   {
-//     id: 1,
-//     title: "Building / Civil Designs (Building Plan & Structural Drawings)",
-//     desc: "For trips within a city or town",
-//     video: "/video/one.mp4",
-//     photo: "/images/1.png",
-//   },
-
-//   {
-//     id: 2,
-//     name: "building&civilconstruction",
-//     title: "Building & Civil Construction Services",
-//     desc: "For trips within a city or town",
-//     video: "/video/two.mp4",
-//     photo: "/images/2.png",
-//   },
-
-//   {
-//     id: 3,
-//     name: "buildingrenovation&maintenance",
-//     title: "Building Renovation & Maintenance",
-//     desc: "For trips within a city or town",
-//     video: "/video/two.mp4",
-//     photo: "/images/3.png",
-//   },
-
-//   {
-//     id: 4,
-//     name: "steelworks&planning",
-//     title: "Steel Works & Planning",
-//     desc: "For trips within a city or town",
-//     video: "/video/two.mp4",
-//     photo: "/images/4.png",
-//   },
-// ];
 
 export const categoryData: category[] = [
   {
@@ -180,36 +138,32 @@ export const categoryData: category[] = [
 ];
 
 
-export const blogData = [
-  {
-    id: "1",
-    slug: "beautiful-nextjs-blog",
-    title: "How to Build a Beautiful Blog in Next.js 15",
-    description:
-      "Learn how to use Next.js 15 and CSS Modules to create a stunning blog page.",
-    image: "/images/blog/collapse.jpg",
-    content: `## Full Blog Content\n\nThis is a detailed guide on building blogs using Next.js 15.`,
-    date: "2025-06-15",
-  },
-  {
-    id: "2",
-    slug: "css-module-animation",
-    title: "Add Smooth Animations with CSS Modules",
-    description: "Make your blog UI smooth and attractive with animation.",
-    image: "/images/blog/wall.png",
-    content: `## Animations with CSS\n\nUse transitions, transforms and keyframes to enhance experience.`,
-    date: "2025-06-14",
-  },
-];
 
-export const videoPlayerData = [
+export const videoSectionData = [
   {
     id: 1,
     video: "/videos/1.mp4",
   },
   {
-    id: 1,
+    id: 2,
     video: "/videos/2.mp4",
+  },
+  {
+    id: 3,
+    video: "/videos/3.mp4",
+  },
+  {
+    id: 4,
+    video: "/videos/4.mp4",
+  },
+
+  {
+    id: 5,
+    video: "/videos/5.mp4",
+  },
+  {
+    id: 6,
+    video: "/videos/6.mp4",
   },
 ];
 
@@ -261,5 +215,24 @@ export const filterData = [
     title: "Office",
     category: "Design",
     image: "/images/portfolio/design1.jpeg",
+  },
+];
+
+export const blogData = [
+  {
+    id: 1,
+    slug: "why-buildings-collapse",
+    title: "Why Do Buildings Collapse?",
+    desc: "Understanding the causes of building collapse and how to prevent them.",
+    image: "/images/blog/collapse.jpg",
+    content: `Building collapses are tragic incidents that often result from a combination of structural deficiencies and external factors.\n\nPreventing such disasters requires a multi-faceted approach including better design, quality control, and adherence to safety standards.`,
+  },
+  {
+    id: 2,
+    slug: "modern-architecture",
+    title: "Modern Architectural Trends",
+    desc: "Explore the latest architectural trends in modern design.",
+    image: "/images/blog/wall.png",
+    content: `Modern architecture emphasizes simplicity, sustainability, and the seamless integration of nature.\n\nThese designs focus on functionality and aesthetics, transforming the way we interact with spaces.`,
   },
 ];
