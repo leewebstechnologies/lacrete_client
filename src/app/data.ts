@@ -243,7 +243,7 @@ export const blogData = [
   },
   {
     id: 2,
-    slug: "modern-architecture",
+    slug: "why-wall-cracks",
     title: "Why wall cracks?",
     desc: "Understanding the causes of wall cracks",
     image: "/images/blog/wall.png",
