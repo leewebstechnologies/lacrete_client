@@ -18,7 +18,7 @@ const Blog = () => {
       <div className={styles.textContainer}>
         <h2>Our Blog</h2>
         <p className={styles.description}>
-          We offer a diverse array of construction services, spanning
+          We offer a diverse array of building and construction services, spanning
           residential, commercial, and industrial projects.
         </p>
       </div>

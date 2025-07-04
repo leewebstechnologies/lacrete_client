@@ -137,8 +137,6 @@ export const categoryData: category[] = [
   },
 ];
 
-
-
 export const videoSectionData = [
   {
     id: 1,
@@ -225,14 +223,48 @@ export const blogData = [
     title: "Why Do Buildings Collapse?",
     desc: "Understanding the causes of building collapse and how to prevent them.",
     image: "/images/blog/collapse.jpg",
-    content: `Building collapses are tragic incidents that often result from a combination of structural deficiencies and external factors.\n\nPreventing such disasters requires a multi-faceted approach including better design, quality control, and adherence to safety standards.`,
+    content: `Building collapses are tragic events that often leave communities shocked and grieving. While some disasters result from natural causes like earthquakes or floods, many occur without any obvious warning signs. Here’s why buildings sometimes collapse unexpectedly:
+    \n\n1. Poor Construction Practices
+    \n\nMany collapses stem from substandard materials, rushed construction, or failure to follow engineering guidelines. Weak foundations, inadequate reinforcement, and poor workmanship can lead to sudden structural failure.
+    \n\n2. Lack of Maintenance
+    \n\nOver time, buildings deteriorate due to weathering, rust, and material fatigue. If cracks, water damage, or corrosion go unnoticed or unrepaired, the structure can weaken until it gives way without visible warning.
+    \n\n3. Illegal Modifications
+    \n\nUnauthorized renovations—such as removing load-bearing walls or adding extra floors—can destabilize a building. Without proper engineering oversight, these changes can lead to catastrophic failure.
+    \n\n4. Hidden Structural Flaws
+    \n\nSome defects, like internal corrosion in steel beams or hidden foundation shifts, aren’t easily detectable. By the time signs appear (such as cracks or leaning), it may be too late.
+    \n\n5. Regulatory Failures
+    \n\nIn some cases, weak enforcement of building codes or corruption in permitting processes allows unsafe structures to remain standing until disaster strikes.
+    \n\nPreventing Future Tragedies:
+    \n\n✅ Enforce strict construction standards
+    \n\n✅ Conduct regular structural inspections
+    \n\n✅ Educate the public on reporting warning signs
+    \n\n✅ Punish negligence and corruption
+    \n\nBuilding collapses shouldn’t happen without warning—proper oversight and proactive maintenance can save lives.`,
   },
   {
     id: 2,
     slug: "modern-architecture",
-    title: "Modern Architectural Trends",
-    desc: "Explore the latest architectural trends in modern design.",
+    title: "Why wall cracks?",
+    desc: "Understanding the causes of wall cracks",
     image: "/images/blog/wall.png",
-    content: `Modern architecture emphasizes simplicity, sustainability, and the seamless integration of nature.\n\nThese designs focus on functionality and aesthetics, transforming the way we interact with spaces.`,
+    content: `Building cracks can occur due to various reasons, often related to structural stress, material properties, environmental factors, or poor construction practices. Here are the main causes:
+    \n\n1. Shrinkage Cracks
+    \n\nConcrete Drying Shrinkage: Fresh concrete loses moisture as it cures, causing slight shrinkage and fine cracks (common in slabs and walls).
+    \n\nThermal Expansion/Contraction: Temperature changes cause materials to expand or contract, leading to stress cracks.
+    \n\n2. Settlement & Foundation Issues
+    \n\nUneven Soil Settlement: Weak or improperly compacted soil can cause the foundation to sink unevenly, leading to cracks in walls and floors.
+    \n\nExpansive Clay Soils: Soil that swells when wet and shrinks when dry can shift the foundation.
+    \n\n3. Structural Overloading
+    \n\nExcessive weight (e.g., heavy machinery, improper design) can exceed the building’s load capacity, causing cracks in beams, columns, or slabs.
+    \n\n4. Poor Construction Practices
+    \n\nInsufficient Curing: Concrete that dries too quickly can weaken and crack.
+
+\n\nLow-Quality Materials: Substandard concrete, weak mortar, or inadequate reinforcement (e.g., insufficient rebar) increase cracking risk.
+
+\n\nImproper Joints: Lack of control joints in concrete slabs leads to uncontrolled cracking.
+\n\n5. Environmental Factors
+\n\nFreeze-Thaw Cycles: Water seeps into cracks, freezes, expands, and worsens cracks (common in colder climates).
+\n\nEarthquakes & Ground Movement: Seismic activity or nearby excavation can shift foundations.
+    `,
   },
 ];
