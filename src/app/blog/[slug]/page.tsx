@@ -6,8 +6,8 @@ interface BlogDetailProps {
   params: {
     slug: string;
   };
+  searchParams?: { [key: string]: string | string[] | undefined };
 }
-
 const BlogDetail = ({ params }: BlogDetailProps) => {
   const item = blogData.find((i) => i.slug === params.slug);
   if (!item) {
