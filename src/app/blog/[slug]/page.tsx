@@ -4,13 +4,14 @@ import Image from "next/image";
 
 
 
-
 interface BlogDetailProps {
   params: { slug: string };
 }
 
-const BlogDetail = ({ params }: BlogDetailProps) => {
-  const item = blogData.find((i) => i.slug === params.slug);
+const BlogDetail = async ({ params }: BlogDetailProps) => {
+  const { slug } = await params; // now awaited properly
+
+  const item = await blogData.find((i) => i.slug === slug);
 
   if (!item) {
     return <div className={styles.detail}>Blog post not found.</div>;
@@ -29,11 +30,20 @@ const BlogDetail = ({ params }: BlogDetailProps) => {
         />
       )}
       {item.content
-        ? item.content.split("\n\n").map((para, index) => (
-            <p key={index}>{para}</p>
-          ))
+        ? item.content
+            .split("\n\n")
+            .map((para, item) => <p key={item}>{para}</p>)
         : null}
     </div>
   );
 };
-export default BlogDetail
+
+export async function generateStaticParams() {
+  return blogData.map((item) => ({
+    slug: item.slug,
+  }));
+}
+
+export default BlogDetail;
+
+

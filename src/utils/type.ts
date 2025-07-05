@@ -29,15 +29,24 @@ export type category = {
   image: StaticImageData;
 };
 
-export type blog = {
-  slug: string;
-  id: number;
-  _id: string;
-  image: StaticImageData;
-  title: string;
-  content: string;
-};
+// export type blog = {
+//   id: number;
+//   title: string;
+//   desc: string;
+//   slug: string;
+//   image: StaticImageData;
+//   content: string;
+// };
 
+
+export type blog = {
+  id: number;
+  slug: string;
+  title: string;
+  desc: string;
+  image: string;
+  content: string;
+}
 
 
 

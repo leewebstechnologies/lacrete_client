@@ -10,28 +10,30 @@ import portfolio3 from "../images/3.png";
 import portfolio4 from "../images/4.png";
 import portfolio5 from "../images/5.png";
 
-import { hero, testimonial, team, category } from "@/utils/type"; //Destructuring
+import { hero, testimonial, team, category, blog } from "@/utils/type"; //Destructuring
 
-// export const sliderData = [
+
+// export const blogData: blog[] = [
 //   {
 //     id: 1,
-//     title: "Welcome to Lacrete Concept Limited",
-//     text: "Where Vision Meets Structure.",
-//     image: "/images/banner-1.jpg",
+//     title: "Why Do Buildings Collapse?",
+//     desc: "Understanding the Causes and How to Prevent Them.",
+//     slug: "why-buildings-collapse",
+//     avatar: "/images/blog/avatar.png",
+//     username: "Ali Ajibade",
+//     image: "/images/collapse.jpg",
 //   },
 //   {
 //     id: 2,
-//     title: "Welcome to Lacrete Concept Limited",
-//     text: "Strength in Every Structure.",
-//     image: "/images/banner-2.jpg",
-//   },
-//   {
-//     id: 3,
-//     title: "Welcome to Lacrete Concept Limited",
-//     text: "Solid Foundations, Lasting Impressions.",
-//     image: "/images/banner-3.jpg",
+//     title: "Why Do Buildings Collapse?",
+//     desc: "Understanding the Causes and How to Prevent Them.",
+//     slug: "why-buildings-collapse",
+//     avatar: "/images/blog/avatar.png",
+//     username: "Ali Ajibade",
+//     image: "/images/wall.png",
 //   },
 // ];
+
 
 export const heroData: hero[] = [
   {
@@ -216,7 +218,8 @@ export const filterData = [
   },
 ];
 
-export const blogData = [
+
+export const blogData: blog[] = [
   {
     id: 1,
     slug: "why-buildings-collapse",
