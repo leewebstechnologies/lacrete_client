@@ -1,5 +1,4 @@
 "use client";
-
 import { useRef, useState } from "react";
 import styles from "./page.module.css";
 import emailjs from "@emailjs/browser";
@@ -13,7 +12,7 @@ const Contact = () => {
     e.preventDefault();
     if (formRef.current) {
       emailjs
-        .sendForm("service_2bwa8bq", "template_nx6tqat", formRef.current, {
+        .sendForm("service_c9dhxoq", "template_nx6tqat", formRef.current, {
           publicKey: "D7s2QtY9npU46KDNG",
         })
         .then(

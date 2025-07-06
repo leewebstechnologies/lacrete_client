@@ -3,20 +3,24 @@ import styles from "./page.module.css";
 import Image from "next/image";
 
 interface BlogDetailProps {
-  params: { slug: string };
+  params: {
+    slug: string;
+  };
+  searchParams?: { [key: string]: string | string[] | undefined };
 }
 
-const BlogDetail = ({ params }: BlogDetailProps) => {
+const BlogDetail = async ({ params }: BlogDetailProps) => {
   const item = blogData.find((i) => i.slug === params.slug);
-
+  console.log(item);
+  console.log(params);
   if (!item) {
     return <div className={styles.notFound}>Blog post not found.</div>;
   }
-  
 
   return (
-    <div className={styles.detail}>
+    <article className={styles.detail}>
       <h1>{item.title}</h1>
+
       {item.image && (
         <Image
           src={item.image}
@@ -26,17 +30,13 @@ const BlogDetail = ({ params }: BlogDetailProps) => {
           height={400}
         />
       )}
-      {item.content
-        ? item.content
-            .split("\n\n")
-            .map((para, item) => <p key={item}>{para}</p>)
-        : null}
-    </div>
+
+      {item.content &&
+        item.content
+          .split("\n\n")
+          .map((para, index) => <p key={index}>{para}</p>)}
+    </article>
   );
 };
 
 export default BlogDetail;
-
-
-
-
