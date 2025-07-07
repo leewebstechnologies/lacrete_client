@@ -1,6 +1,6 @@
-import { createServer } from "http";
-import { parse } from "url";
-import next from "next";
+const { createServer } = require("http");
+const next = require("next");
+const { parse } = require("url");
 
 const port = process.env.PORT || 3000;
 const dev = process.env.NODE_ENV !== "production";
