@@ -1,44 +1,22 @@
-import banner1 from "../images/banner-1.jpg";
+// import banner1 from "../images/banner-1.jpg";
 import banner2 from "../images/banner-2.jpg";
 import banner3 from "../images/banner-3.jpg";
+import background from "../images/background.jpg";
 import avatar from "../images/avatar.png";
 import avatar6 from "../images/avatar6.png";
-import member from "../images/testimonial3.jpg";
-import portfolio1 from "../images/1.png";
-import portfolio2 from "../images/2.png";
-import portfolio3 from "../images/3.png";
-import portfolio4 from "../images/4.png";
-import portfolio5 from "../images/5.png";
+// import portfolio1 from "../images/1.png";
+// import portfolio2 from "../images/2.png";
+// import portfolio3 from "../images/3.png";
+// import portfolio4 from "../images/4.png";
+// import portfolio5 from "../images/5.png";
+// import portfolio6 from "../images/background.jpg";
 
-import { hero, testimonial, team, category, blog } from "@/utils/type"; //Destructuring
-
-
-// export const blogData: blog[] = [
-//   {
-//     id: 1,
-//     title: "Why Do Buildings Collapse?",
-//     desc: "Understanding the Causes and How to Prevent Them.",
-//     slug: "why-buildings-collapse",
-//     avatar: "/images/blog/avatar.png",
-//     username: "Ali Ajibade",
-//     image: "/images/collapse.jpg",
-//   },
-//   {
-//     id: 2,
-//     title: "Why Do Buildings Collapse?",
-//     desc: "Understanding the Causes and How to Prevent Them.",
-//     slug: "why-buildings-collapse",
-//     avatar: "/images/blog/avatar.png",
-//     username: "Ali Ajibade",
-//     image: "/images/wall.png",
-//   },
-// ];
-
+import { hero, testimonial, blog } from "@/utils/type"; //Destructuring
 
 export const heroData: hero[] = [
   {
     id: 1,
-    image: banner1,
+    image: background,
     title: "Welcome to Lacrete Concept Construction Company",
     subtitle: "We build top-notch projects",
   },
@@ -80,89 +58,44 @@ export const testimonialData: testimonial[] = [
   },
 ];
 
-export const teamData: team[] = [
-  {
-    id: 1,
-    image: member,
-    name: "Azeez Adeyemi",
-    position: "Founder & CEO",
-  },
-  {
-    id: 2,
-    image: member,
-    name: "Ali Ajibade",
-    position: "Head of Architecture",
-  },
-  {
-    id: 3,
-    image: member,
-    name: "Adedotun Ajibade",
-    position: "Construction Manager",
-  },
-];
 
-export const categoryData: category[] = [
-  {
-    id: 1,
-    title: "Mansion",
-    desc: "Mansion at Ikoyi, Lagos",
-    category: "Residential",
-    image: portfolio1,
-  },
-  {
-    id: 2,
-    title: "School",
-    desc: "Primary School at Ikoyi, Lagos",
-    category: "Educational",
-    image: portfolio2,
-  },
-  {
-    id: 3,
-    title: "Health Center",
-    desc: "Modern Health Center at Ikoyi, Lagos",
-    category: "Healthcare",
-    image: portfolio3,
-  },
-  {
-    id: 4,
-    title: "Founadtion",
-    desc: "Mansion at Ikoyi, Lagos",
-    category: "Foundation",
-    image: portfolio4,
-  },
-  {
-    id: 5,
-    title: "Mansion",
-    desc: "Mansion at Ikoyi, Lagos",
-    category: "Residential",
-    image: portfolio5,
-  },
-];
 
 export const videoSectionData = [
   {
     id: 1,
-    video: "/videos/1.mp4",
+    video: "/videos/9.mp4",
   },
   {
     id: 2,
-    video: "/videos/2.mp4",
+    video: "/videos/7.mp4",
   },
   {
     id: 3,
-    video: "/videos/3.mp4",
+    video: "/videos/8.mp4",
   },
   {
     id: 4,
+    video: "/videos/1.mp4",
+  },
+  {
+    id: 5,
+    video: "/videos/2.mp4",
+  },
+  {
+    id: 6,
+    video: "/videos/3.mp4",
+  },
+  {
+    id: 7,
     video: "/videos/4.mp4",
   },
 
   {
-    id: 5,
+    id: 8,
     video: "/videos/5.mp4",
   },
   {
-    id: 6,
+    id: 9,
     video: "/videos/6.mp4",
   },
 ];
@@ -194,9 +127,9 @@ export const filterData = [
   },
   {
     id: 5,
-    title: "Mansion",
+    title: "Foundation",
     category: "Ongoing",
-    image: "/images/portfolio/5.png",
+    image: "/images/portfolio/8.png",
   },
   {
     id: 6,
@@ -216,8 +149,13 @@ export const filterData = [
     category: "Design",
     image: "/images/portfolio/design1.jpeg",
   },
+  {
+    id: 9,
+    title: "Duplex",
+    category: "Completed",
+    image: "/images/portfolio/duplex.jpg",
+  },
 ];
-
 
 export const blogData: blog[] = [
   {

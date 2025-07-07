@@ -1,18 +1,16 @@
+"use client";
+
 import { blogData } from "@/app/data";
 import styles from "./page.module.css";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
-interface BlogDetailProps {
-  params: {
-    slug: string;
-  };
-  searchParams?: { [key: string]: string | string[] | undefined };
-}
 
-const BlogDetail = async ({ params }: BlogDetailProps) => {
-  const item = blogData.find((i) => i.slug === params.slug);
-  console.log(item);
-  console.log(params);
+const BlogDetail = () => {
+
+  const route = usePathname();
+  const item = blogData.find((i) => i.slug === route.split("/").pop());
+
   if (!item) {
     return <div className={styles.notFound}>Blog post not found.</div>;
   }

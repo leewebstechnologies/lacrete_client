@@ -12,7 +12,7 @@ const Contact = () => {
     e.preventDefault();
     if (formRef.current) {
       emailjs
-        .sendForm("service_c9dhxoq", "template_nx6tqat", formRef.current, {
+        .sendForm("service_2bwa8bq", "template_nx6tqat", formRef.current, {
           publicKey: "D7s2QtY9npU46KDNG",
         })
         .then(

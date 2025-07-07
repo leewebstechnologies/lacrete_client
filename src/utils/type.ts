@@ -14,12 +14,6 @@ export type testimonial = {
   name: string;
 }
 
-export type team = {
-  id: number;
-  image: StaticImageData;
-  name: string;
-  position: string;
-};
 
 export type category = {
   id: number;
@@ -28,15 +22,6 @@ export type category = {
   category: string;
   image: StaticImageData;
 };
-
-// export type blog = {
-//   id: number;
-//   title: string;
-//   desc: string;
-//   slug: string;
-//   image: StaticImageData;
-//   content: string;
-// };
 
 
 export type blog = {

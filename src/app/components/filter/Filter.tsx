@@ -1,11 +1,8 @@
 "use client";
 import { useState } from "react";
-
 import "./filter.css";
-
 import Image from "next/image";
 import { filterData } from "@/app/data";
-// import Image from "next/image";
 
 const categories = ["all", "Completed", "Ongoing", "Design"];
 
