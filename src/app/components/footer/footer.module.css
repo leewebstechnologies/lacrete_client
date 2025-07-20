@@ -53,6 +53,15 @@
   margin-right: 20px;
 }
 
+.developer {
+  color: #fff;
+  text-decoration: none;
+}
+
+.info {
+  color: #25b60f;
+}
+
 @media screen and (max-width: 991px) {
   .footer {
     display: flex;
