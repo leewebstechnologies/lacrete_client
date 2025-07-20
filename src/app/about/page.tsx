@@ -5,13 +5,13 @@ import about from "../../images/about.png";
 const About = () => {
   return (
     <div className={styles.about}>
-        <Image
-          className={styles.aboutImage}
-          src={about}
-          width={1000}
-          height={500}
-          alt="about"
-        />
+      <Image
+        className={styles.aboutImage}
+        src={about}
+        width={1000}
+        height={500}
+        alt="about"
+      />
       <div className={styles.container}>
         <div className={styles.section}>
           <h2>Who We Are</h2>
@@ -87,8 +87,8 @@ const About = () => {
           <h2>Our History</h2>
           <p>
             Founded in 2005, Lacrete Concept Constructions began as a small
-            contracting firm with a big dream. Over the years, we have grown into
-            a nationally recognized brand, known for delivering over 500
+            contracting firm with a big dream. Over the years, we have grown
+            into a nationally recognized brand, known for delivering over 500
             successful projects across diverse sectors. Our story is built on
             hard work, dedication, and a relentless pursuit of excellence.
           </p>

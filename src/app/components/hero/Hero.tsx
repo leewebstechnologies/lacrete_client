@@ -1,68 +1,98 @@
-import Image from "next/image";
-import "./hero.css";
-import { heroData } from "@/app/data";
+"use client";
+import { useEffect, useState } from "react";
+import { slides } from "@/app/data";
+import styles from "./hero.module.css";
+import Link from "next/link";
 
 const Hero = () => {
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+    // Auto-play functionality
+    useEffect(() => {
+      let interval: NodeJS.Timeout;
+
+      if (isAutoPlaying) {
+        interval = setInterval(() => {
+          setCurrentSlide((prev) => (prev + 1) % slides.length);
+        }, 5000);
+      }
+
+      return () => clearInterval(interval);
+    }, [isAutoPlaying]);
+
+    const goToSlide = (index: number) => {
+      setCurrentSlide(index);
+      setIsAutoPlaying(false);
+      // Resume auto-play after manual navigation
+      setTimeout(() => setIsAutoPlaying(true), 10000);
+    };
+
+    const goToPrevSlide = () => {
+      setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+      setIsAutoPlaying(false);
+      setTimeout(() => setIsAutoPlaying(true), 10000);
+    };
+
+    const goToNextSlide = () => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+      setIsAutoPlaying(false);
+      setTimeout(() => setIsAutoPlaying(true), 10000);
+    };
   return (
-    <div className="hero">
-      <div
-        id="carouselExampleCaptions"
-        className="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to={0}
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          />
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to={1}
-            aria-label="Slide 2"
-          />
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to={2}
-            aria-label="Slide 3"
-          />
-        </div>
-        <div className="carousel-inner">
-          {heroData.map((index) => (
-            <div key={index.id} className="carousel-item active">
-              <Image src={index.image} className="d-block w-100" alt="image" />
-              <div className="carousel-caption d-none d-md-block">
-                <h3>{index.title}</h3>
-                <p>{index.subtitle}</p>
-              </div>
+    <div className={styles.carousel}>
+      {/* Slides */}
+      <div className={styles.slides}>
+        {slides.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={`${styles.slide} ${
+              index === currentSlide ? styles.active : ""
+            }`}
+            style={{ backgroundImage: `url(${slide.imageUrl})` }}
+            aria-hidden={index !== currentSlide}
+          >
+            <div className={styles.slideContent}>
+              <h2 className={styles.title}>{slide.title}</h2>
+              <p className={styles.subtitle}>{slide.subtitle}</p>
+              <Link href={slide.ctaLink} className={styles.ctaButton}>
+                {slide.ctaText}
+              </Link>
             </div>
-          ))}
-        </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev"
-        >
-          <span className="carousel-control-prev-icon" aria-hidden="true" />
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next"
-        >
-          <span className="carousel-control-next-icon" aria-hidden="true" />
-          <span className="visually-hidden">Next</span>
-        </button>
+          </div>
+        ))}
+      </div>
+
+      {/* Navigation Arrows */}
+      <button
+        className={`${styles.arrow} ${styles.prev}`}
+        onClick={goToPrevSlide}
+        aria-label="Previous slide"
+      >
+        &lt;
+      </button>
+      <button
+        className={`${styles.arrow} ${styles.next}`}
+        onClick={goToNextSlide}
+        aria-label="Next slide"
+      >
+        &gt;
+      </button>
+
+      {/* Indicators */}
+      <div className={styles.indicators}>
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            className={`${styles.indicator} ${
+              index === currentSlide ? styles.active : ""
+            }`}
+            onClick={() => goToSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
     </div>
   );
-};
-export default Hero;
+}
+export default Hero

@@ -35,6 +35,6 @@
 /* Optional: Make sure videos stack on small screens */
 @media (max-width: 768px) {
   .video {
-    max-width: 100%;
+    margin: 0 20px;
   }
 }

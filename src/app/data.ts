@@ -1,7 +1,3 @@
-// import banner1 from "../images/banner-1.jpg";
-import banner2 from "../images/banner-2.jpg";
-import banner3 from "../images/banner-3.jpg";
-import background from "../images/background.jpg";
 import avatar from "../images/avatar.png";
 import avatar6 from "../images/avatar6.png";
 // import portfolio1 from "../images/1.png";
@@ -11,28 +7,57 @@ import avatar6 from "../images/avatar6.png";
 // import portfolio5 from "../images/5.png";
 // import portfolio6 from "../images/background.jpg";
 
-import { hero, testimonial, blog } from "@/utils/type"; //Destructuring
+import { testimonial, blog } from "@/utils/type"; //Destructuring
 
-export const heroData: hero[] = [
+export const slides = [
   {
     id: 1,
-    image: background,
-    title: "Welcome to Lacrete Concept Construction Company",
-    subtitle: "We build top-notch projects",
+    imageUrl: "/images/hero/1.jpg",
+    title: "Building The Future",
+    subtitle:
+      "Quality construction services for residential and commercial projects",
+    ctaText: "View Projects",
+    ctaLink: "/portfolio",
   },
   {
     id: 2,
-    image: banner2,
-    title: "Welcome to Lacrete Concept Construction Company",
-    subtitle: "We use high-quality materials",
+    imageUrl: "/images/hero/banner-2.jpg",
+    title: "Expert Craftsmanship",
+    subtitle: "Decades of experience in delivering exceptional results",
+    ctaText: "Our Services",
+    ctaLink: "/about",
   },
   {
     id: 3,
-    image: banner3,
-    title: "Welcome to Lacrete Concept Construction Company",
-    subtitle: "Your Vision, Our Mission",
+    imageUrl: "/images/hero/banner-3.jpg",
+    title: "Sustainable Solutions",
+    subtitle: "Eco-friendly construction with innovative materials",
+    ctaText: "Learn More",
+    ctaLink: "/about",
   },
 ];
+
+
+// export const heroData: hero[] = [
+//   {
+//     id: 1,
+//     image: banner1,
+//     title: "Welcome to Lacrete Concept Construction Company",
+//     subtitle: "We build top-notch projects",
+//   },
+//   {
+//     id: 2,
+//     image: banner2,
+//     title: "Welcome to Lacrete Concept Construction Company",
+//     subtitle: "We use high-quality materials",
+//   },
+//   {
+//     id: 3,
+//     image: banner3,
+//     title: "Welcome to Lacrete Concept Construction Company",
+//     subtitle: "Your Vision, Our Mission",
+//   },
+// ];
 
 export const testimonialData: testimonial[] = [
   {
