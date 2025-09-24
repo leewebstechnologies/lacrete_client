@@ -6,6 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import BootstrapClient from "./components/BootstrapClient";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
+import { ToastContainer } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,6 +44,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <BootstrapClient />
+        <ToastContainer position="top-center" />
         <Footer />
       </body>
     </html>
