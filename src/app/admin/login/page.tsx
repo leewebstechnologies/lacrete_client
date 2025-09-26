@@ -3,6 +3,9 @@
 import { toast } from "react-toastify";
 import styles from "./page.module.css";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useRouter } from "next/navigation";
+import { useContext } from "react";
+import { AuthContext } from "@/app/context/Auth";
 
 type Inputs = {
   email: string;
@@ -10,6 +13,12 @@ type Inputs = {
 };
 
 const Login = () => {
+  const authContext = useContext(AuthContext);
+  if (!authContext) {
+    throw new Error("AuthContext is not available");
+  }
+  const { login } = authContext;
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -29,7 +38,15 @@ const Login = () => {
     if (result.status == false) {
       toast.error(result.message);     
     } else {
-      toast.success("Login successful!");
+      // store user info in local storage
+      const userInfo = {
+        id: result.id,
+        token: result.token
+      }
+
+      localStorage.setItem("userInfo", JSON.stringify(userInfo));
+      login(result.token);
+      router.push('/admin/dashboard');
     }
     console.log(result);
 

@@ -60,7 +60,7 @@
 }
 
 .button {
-  background-color: #0d6efd;
+  background-color: #25b60f;
   color: #fff;
   padding: 0.6rem 1.2rem;
   border: none;
@@ -72,7 +72,7 @@
 }
 
 .button:hover {
-  background-color: #0b5ed7;
+  background-color: #000;
 }
 
 .error {
