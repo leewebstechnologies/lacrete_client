@@ -24,17 +24,22 @@ const Sidebar = () => {
           </li>
           <li>
             <Link className={styles.listItem} href="/">
-              Projects
+              Testimonial
             </Link>
           </li>
           <li>
+            <Link className={styles.listItem} href="/">
+              Video
+            </Link>
+          </li>
+          <li>
+            <Link className={styles.listItem} href="/">
+              Portfolio
+            </Link>
+          </li>
+           <li>
             <Link className={styles.listItem} href="/">
               Blog
-            </Link>
-          </li>
-          <li>
-            <Link className={styles.listItem} href="/">
-              Articles
             </Link>
           </li>
           <li>
