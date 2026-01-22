@@ -230,4 +230,58 @@ export const blogData: blog[] = [
 \n\nEarthquakes & Ground Movement: Seismic activity or nearby excavation can shift foundations.
     `,
   },
+
+  {
+    id: 3,
+    slug: "why-wall-cracks",
+    title: "Why wall cracks?",
+    desc: "Understanding the causes of wall cracks",
+    image: "/images/blog/wall.png",
+    content: `Building cracks can occur due to various reasons, often related to structural stress, material properties, environmental factors, or poor construction practices. Here are the main causes:
+    \n\n1. Shrinkage Cracks
+    \n\nConcrete Drying Shrinkage: Fresh concrete loses moisture as it cures, causing slight shrinkage and fine cracks (common in slabs and walls).
+    \n\nThermal Expansion/Contraction: Temperature changes cause materials to expand or contract, leading to stress cracks.
+    \n\n2. Settlement & Foundation Issues
+    \n\nUneven Soil Settlement: Weak or improperly compacted soil can cause the foundation to sink unevenly, leading to cracks in walls and floors.
+    \n\nExpansive Clay Soils: Soil that swells when wet and shrinks when dry can shift the foundation.
+    \n\n3. Structural Overloading
+    \n\nExcessive weight (e.g., heavy machinery, improper design) can exceed the building’s load capacity, causing cracks in beams, columns, or slabs.
+    \n\n4. Poor Construction Practices
+    \n\nInsufficient Curing: Concrete that dries too quickly can weaken and crack.
+
+\n\nLow-Quality Materials: Substandard concrete, weak mortar, or inadequate reinforcement (e.g., insufficient rebar) increase cracking risk.
+
+\n\nImproper Joints: Lack of control joints in concrete slabs leads to uncontrolled cracking.
+\n\n5. Environmental Factors
+\n\nFreeze-Thaw Cycles: Water seeps into cracks, freezes, expands, and worsens cracks (common in colder climates).
+\n\nEarthquakes & Ground Movement: Seismic activity or nearby excavation can shift foundations.
+    `,
+  },
+
+  {
+    id: 4,
+    slug: "why-wall-cracks",
+    title: "Why wall cracks?",
+    desc: "Understanding the causes of wall cracks",
+    image: "/images/blog/wall.png",
+    content: `Building cracks can occur due to various reasons, often related to structural stress, material properties, environmental factors, or poor construction practices. Here are the main causes:
+    \n\n1. Shrinkage Cracks
+    \n\nConcrete Drying Shrinkage: Fresh concrete loses moisture as it cures, causing slight shrinkage and fine cracks (common in slabs and walls).
+    \n\nThermal Expansion/Contraction: Temperature changes cause materials to expand or contract, leading to stress cracks.
+    \n\n2. Settlement & Foundation Issues
+    \n\nUneven Soil Settlement: Weak or improperly compacted soil can cause the foundation to sink unevenly, leading to cracks in walls and floors.
+    \n\nExpansive Clay Soils: Soil that swells when wet and shrinks when dry can shift the foundation.
+    \n\n3. Structural Overloading
+    \n\nExcessive weight (e.g., heavy machinery, improper design) can exceed the building’s load capacity, causing cracks in beams, columns, or slabs.
+    \n\n4. Poor Construction Practices
+    \n\nInsufficient Curing: Concrete that dries too quickly can weaken and crack.
+
+\n\nLow-Quality Materials: Substandard concrete, weak mortar, or inadequate reinforcement (e.g., insufficient rebar) increase cracking risk.
+
+\n\nImproper Joints: Lack of control joints in concrete slabs leads to uncontrolled cracking.
+\n\n5. Environmental Factors
+\n\nFreeze-Thaw Cycles: Water seeps into cracks, freezes, expands, and worsens cracks (common in colder climates).
+\n\nEarthquakes & Ground Movement: Seismic activity or nearby excavation can shift foundations.
+    `,
+  },
 ];

@@ -20,7 +20,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ item }) => {
         src={item.image}
         alt={item.title}
         width={1000}
-        height={500}
+        height={300}
         className={styles.image}
       />
       <div className={styles.content}>
