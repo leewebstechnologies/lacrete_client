@@ -12,17 +12,17 @@ const Testimonial = () => {
           about their experience with us.
         </p>
         <div className={styles.testimonialGrid}>
-          {testimonialData.map((index) => (
-            <div key={index.id} className={styles.testimonialCard}>
-              <p className={styles.testimonialText}>{index.comment}</p>
+          {testimonialData.map((item) => (
+            <div key={item.id} className={styles.testimonialCard}>
+              <p className={styles.testimonialText}>{item.comment}</p>
               <div className={styles.testimonialAuthor}>
                 <Image
-                  src={index.image}
+                  src={item.image}
                   alt="client's avatar"
                   className={styles.authorImg}
                 />
                 <div className={styles.authorInfo}>
-                  <h4 className={styles.name}>{index.name}</h4>
+                  <h4 className={styles.name}>{item.name}</h4>
                 </div>
               </div>
             </div>

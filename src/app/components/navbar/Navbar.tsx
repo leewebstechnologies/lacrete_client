@@ -4,8 +4,11 @@ import styles from "./navbar.module.css";
 import Image from "next/image";
 import logo from "../../../images/logo.png";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
 
 const Navbar = () => {
+  const currentPath = usePathname();
   const [open, setOpen] = useState(false);
   return (
     <div className={styles.container}>
@@ -14,27 +17,60 @@ const Navbar = () => {
       </Link>
       <ul className={styles.list}>
         <li className={styles.listItem}>
-          <Link className={styles.item} href="/">
+          <Link
+            className={clsx(
+              styles.item,
+              currentPath === "/" && styles.activeLink,
+            )}
+            href="/"
+          >
             Home
           </Link>
+          {/* <Link className={styles.item} href="/">
+            Home
+          </Link> */}
         </li>
         <li className={styles.listItem}>
-          <Link className={styles.item} href="/about">
+          <Link
+            className={clsx(
+              styles.item,
+              currentPath === "/about" && styles.activeLink,
+            )}
+            href="/about"
+          >
             About Us
           </Link>
         </li>
         <li className={styles.listItem}>
-          <Link className={styles.item} href="/portfolio">
+          <Link
+            className={clsx(
+              styles.item,
+              currentPath === "/portfolio" && styles.activeLink,
+            )}
+            href="/portfolio"
+          >
             Portfolio
           </Link>
         </li>
         <li className={styles.listItem}>
-          <Link className={styles.item} href="/blog">
+          <Link
+            className={clsx(
+              styles.item,
+              currentPath === "/blog" && styles.activeLink,
+            )}
+            href="/blog"
+          >
             Blog
           </Link>
         </li>
         <li className={styles.listItem}>
-          <Link className={styles.item} href="/contact">
+          <Link
+            className={clsx(
+              styles.item,
+              currentPath === "/contact" && styles.activeLink,
+            )}
+            href="/contact"
+          >
             Contact Us
           </Link>
         </li>

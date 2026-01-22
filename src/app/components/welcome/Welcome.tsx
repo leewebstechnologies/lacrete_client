@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./welcome.module.css";
 import img7 from "../../../images/7.png";
+import { welcomeData } from "@/app/data";
 
 const Welcome = () => {
   return (
@@ -20,16 +21,19 @@ const Welcome = () => {
           </p>
           <h4>What we do:</h4>
           <div className={styles.icons}>
-            <div className={styles.icon}>
-              <i
-                className="circle-arrow fa-solid fa-circle-arrow-right"
-                style={{ color: "#25b60f" }}
-              />
-              <span className={styles.text}>
-                Building / Civil Designs (Building Plan & Structural Drawings)
-              </span>
-            </div>
-            <div className={styles.icon}>
+            {welcomeData.map((item) => (
+              <div key={item.id} className={styles.icon}>
+                <i
+                  className="circle-arrow fa-solid fa-circle-arrow-right"
+                  style={{ color: "#25b60f" }}
+                />
+                <span className={styles.text}>
+                  {item.title}
+                </span>
+              </div>
+            ))}
+
+            {/* <div className={styles.icon}>
               <i
                 className="circle-arrow fa-solid fa-circle-arrow-right"
                 style={{ color: "#25b60f" }}
@@ -53,7 +57,7 @@ const Welcome = () => {
                 style={{ color: "#25b60f" }}
               ></i>
               <span className={styles.text}>Steel Works</span>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

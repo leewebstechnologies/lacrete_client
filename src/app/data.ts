@@ -16,15 +16,15 @@ export const slides = [
     title: "Building The Future",
     subtitle:
       "Quality construction services for residential and commercial projects",
-    ctaText: "View Projects",
-    ctaLink: "/portfolio",
+    ctaText: "Learn More",
+    ctaLink: "/about",
   },
   {
     id: 2,
     imageUrl: "/images/hero/banner-2.jpg",
     title: "Expert Craftsmanship",
     subtitle: "Decades of experience in delivering exceptional results",
-    ctaText: "Our Services",
+    ctaText: "Learn More",
     ctaLink: "/about",
   },
   {
@@ -36,28 +36,6 @@ export const slides = [
     ctaLink: "/about",
   },
 ];
-
-
-// export const heroData: hero[] = [
-//   {
-//     id: 1,
-//     image: banner1,
-//     title: "Welcome to Lacrete Concept Construction Company",
-//     subtitle: "We build top-notch projects",
-//   },
-//   {
-//     id: 2,
-//     image: banner2,
-//     title: "Welcome to Lacrete Concept Construction Company",
-//     subtitle: "We use high-quality materials",
-//   },
-//   {
-//     id: 3,
-//     image: banner3,
-//     title: "Welcome to Lacrete Concept Construction Company",
-//     subtitle: "Your Vision, Our Mission",
-//   },
-// ];
 
 export const testimonialData: testimonial[] = [
   {
@@ -122,6 +100,25 @@ export const videoSectionData = [
   {
     id: 9,
     video: "/videos/6.mp4",
+  },
+];
+
+export const welcomeData = [
+  {
+    id: 1,
+    title: "Building / Civil Designs (Building Plan & Structural Drawings)",
+  },
+  {
+    id: 2,
+    title: "Building & Civil Construction Services",
+  },
+  {
+    id: 3,
+    title: "Building Renovation & Maintenance",
+  },
+  {
+    id: 4,
+    title: "Steel Works",
   },
 ];
 

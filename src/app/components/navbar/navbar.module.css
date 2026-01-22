@@ -19,6 +19,7 @@
 .item {
   color: #25b60f;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .item:hover {
@@ -57,6 +58,10 @@
 
 .menu {
   display: none;
+}
+
+.activeLink {
+  color: #fff;
 }
 
 

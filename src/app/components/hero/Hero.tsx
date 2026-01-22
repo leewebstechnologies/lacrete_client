@@ -24,7 +24,6 @@ const Hero = () => {
     const goToSlide = (index: number) => {
       setCurrentSlide(index);
       setIsAutoPlaying(false);
-      // Resume auto-play after manual navigation
       setTimeout(() => setIsAutoPlaying(true), 10000);
     };
 

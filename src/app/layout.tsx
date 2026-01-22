@@ -6,9 +6,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import BootstrapClient from "./components/BootstrapClient";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-import { ToastContainer } from "react-toastify";
-import { AuthProvider } from "./context/Auth";
-import "react-toastify/dist/ReactToastify.css";
+// import { ToastContainer } from "react-toastify";
+// import { AuthProvider } from "./context/Auth";
+// import "react-toastify/dist/ReactToastify.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,13 +42,13 @@ export default function RootLayout({
         />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <AuthProvider>
+       
           <BootstrapClient />
           <Navbar />
           <main>{children}</main>
-          <ToastContainer position="top-center" />
+          {/* <ToastContainer position="top-center" /> */}
           <Footer />
-        </AuthProvider>
+      
         
       </body>
     </html>
