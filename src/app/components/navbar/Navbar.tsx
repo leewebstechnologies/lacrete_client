@@ -2,7 +2,6 @@
 import Link from "next/link";
 import styles from "./navbar.module.css";
 import Image from "next/image";
-import logo from "../../../images/logo.png";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
@@ -13,7 +12,7 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       <Link href="/">
-        <Image className={styles.logo} src={logo} alt="logo" />
+        <Image className={styles.logo} src="/images/logo.png" alt="logo" width={140} height={35} />
       </Link>
       <ul className={styles.list}>
         <li className={styles.listItem}>
@@ -26,9 +25,6 @@ const Navbar = () => {
           >
             Home
           </Link>
-          {/* <Link className={styles.item} href="/">
-            Home
-          </Link> */}
         </li>
         <li className={styles.listItem}>
           <Link
