@@ -4,6 +4,7 @@ import { videoSectionData } from "@/app/data";
 import styles from "./videoSection.module.css";
 
 const VideoSection = () => {
+  
   return (
     <div className={styles.videos}>
       <h2 className={styles.text}>Watch our videos</h2>

@@ -5,39 +5,39 @@ import styles from "./hero.module.css";
 import Link from "next/link";
 
 const Hero = () => {
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-    // Auto-play functionality
-    useEffect(() => {
-      let interval: NodeJS.Timeout;
+  // Auto-play functionality
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
 
-      if (isAutoPlaying) {
-        interval = setInterval(() => {
-          setCurrentSlide((prev) => (prev + 1) % slides.length);
-        }, 5000);
-      }
+    if (isAutoPlaying) {
+      interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+      }, 5000);
+    }
 
-      return () => clearInterval(interval);
-    }, [isAutoPlaying]);
+    return () => clearInterval(interval);
+  }, [isAutoPlaying]);
 
-    const goToSlide = (index: number) => {
-      setCurrentSlide(index);
-      setIsAutoPlaying(false);
-      setTimeout(() => setIsAutoPlaying(true), 10000);
-    };
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000);
+  };
 
-    const goToPrevSlide = () => {
-      setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-      setIsAutoPlaying(false);
-      setTimeout(() => setIsAutoPlaying(true), 10000);
-    };
+  const goToPrevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000);
+  };
 
-    const goToNextSlide = () => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-      setIsAutoPlaying(false);
-      setTimeout(() => setIsAutoPlaying(true), 10000);
-    };
+  const goToNextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000);
+  };
   return (
     <div className={styles.carousel}>
       {/* Slides */}
@@ -93,5 +93,5 @@ const Hero = () => {
       </div>
     </div>
   );
-}
-export default Hero
+};
+export default Hero;

@@ -1,31 +1,66 @@
 "use client";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import styles from "./page.module.css";
-import emailjs from "@emailjs/browser";
+import { API_BASE_URL } from "@/config/config";
 
 const Contact = () => {
-  const [done, setDone] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  console.log(formData);
 
-  const formRef = useRef<HTMLFormElement | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (formRef.current) {
-      emailjs
-        .sendForm("service_2bwa8bq", "template_nx6tqat", formRef.current, {
-          publicKey: "D7s2QtY9npU46KDNG",
-        })
-        .then(
-          () => {
-            console.log("SUCCESS!");
-            setDone(true);
-          },
-          (error: { text: string }) => {
-            console.log("FAILED...", error.text);
-          }
+    setIsSubmitting(true);
+    setSuccessMessage("");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(
+          errorData.error
+            ? JSON.stringify(errorData.errors)
+            : "Something went wrong",
         );
+      }
+
+      setSuccessMessage("Your message has been sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      setErrorMessage("Failed to send message. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
     }
-  }
+  };
   return (
     <>
       <div className={styles.contactContainer}>
@@ -38,7 +73,11 @@ const Contact = () => {
         <div className={styles.contactContent}>
           <div className={styles.contactForm}>
             <h2>Send Us a Message</h2>
-            <form ref={formRef} onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
+              {successMessage && (
+                <p className="text-green-800">{successMessage}</p>
+              )}
+              {errorMessage && <p className="text-red-800">{errorMessage}</p>}
               <div className={styles.formGroup}>
                 <label htmlFor="name">Full Name</label>
                 <input
@@ -46,7 +85,9 @@ const Contact = () => {
                   id="name"
                   placeholder="Your full name"
                   required
-                  name="user_name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                 />
               </div>
               <div className={styles.formGroup}>
@@ -56,7 +97,9 @@ const Contact = () => {
                   id="email"
                   placeholder="you@example.com"
                   required
-                  name="user_email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                 />
               </div>
               <div className={styles.formGroup}>
@@ -66,7 +109,9 @@ const Contact = () => {
                   id="subject"
                   placeholder="Subject of your message"
                   required
-                  name="user_subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
                 />
               </div>
               <div className={styles.formGroup}>
@@ -76,18 +121,18 @@ const Contact = () => {
                   rows={5}
                   placeholder="Type your message here..."
                   required
-                  defaultValue={""}
                   name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                 />
               </div>
-              <button type="submit" className={styles.submitBtn}>
-                Send Message
+              <button
+                type="submit"
+                className={styles.submitBtn}
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending ..." : "Send Message"}
               </button>
-              {done && (
-                <p className={styles.successMessage}>
-                  Thank you! Your message has been sent successfully.
-                </p>
-              )}
             </form>
           </div>
           <div className={styles.contactInfo}>

@@ -21,7 +21,7 @@ export const slides = [
   },
   {
     id: 2,
-    imageUrl: "/images/hero/banner-2.jpg",
+    imageUrl: "/images/hero/2.jpg",
     title: "Expert Craftsmanship",
     subtitle: "Decades of experience in delivering exceptional results",
     ctaText: "Learn More",
@@ -29,7 +29,7 @@ export const slides = [
   },
   {
     id: 3,
-    imageUrl: "/images/hero/banner-3.jpg",
+    imageUrl: "/images/hero/3.jpg",
     title: "Sustainable Solutions",
     subtitle: "Eco-friendly construction with innovative materials",
     ctaText: "Learn More",
