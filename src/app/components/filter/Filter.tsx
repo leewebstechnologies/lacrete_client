@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import "./filter.css";
+import styles from "./filter.module.css";
 import Image from "next/image";
 import { filterData } from "@/app/data";
 
@@ -14,22 +14,22 @@ const Filter = () => {
       ? filterData
       : filterData.filter((item) => item.category === filter);
   return (
-    <section className="portfolio">
-      <div className="container">
-        <ul className="filterMenu">
+    <section className={styles.portfolio}>
+      <div className={styles.container}>
+        <ul className={styles.filterMenu}>
           {categories.map((cat) => (
             <li
               key={cat}
-              className={filter === cat ? "active" : ""}
+              className={filter === cat ? styles.active : ""}
               onClick={() => setFilter(cat)}
             >
               {cat.charAt(0).toUpperCase() + cat.slice(1)}
             </li>
           ))}
         </ul>
-        <div className="grid">
+        <div className={styles.grid}>
           {filteredItems.map((item) => (
-            <div className="gridItem fade-in" key={item.id}>
+            <div className={`${styles.gridItem} ${styles.fadeIn}`} key={item.id}>
               <Image src={item.image} alt={item.title} width={550} height={500}/>
               <h4>{item.title}</h4>
               <p>{item.category}</p>

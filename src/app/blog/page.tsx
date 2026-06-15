@@ -6,28 +6,31 @@ import BlogCard from "../components/blogCard/BlogCard";
 const Blog = () => {
   return (
     <div className={styles.blog}>
-      <div className={styles.imageContainer}>
+      <section className={styles.heroSection}>
         <Image
           src="/images/portfolio/banner.jpg"
-          alt="banner"
+          alt="Our Blog Banner"
           fill
           priority
-          className={styles.image}
+          className={styles.heroImage}
         />
-      </div>
-      <div className={styles.textContainer}>
-        <h2>Our Blog</h2>
-        <p className={styles.desc}>
-          We offer a diverse array of building and construction services, spanning
-          residential, commercial, and industrial projects.
-        </p>
-      </div>
-      <div className={styles.grid}>
-        {blogData.map((item) => (
-          <BlogCard key={item.id} item={item} />
-        ))}
-      </div>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>Insights & Innovations</h1>
+          <p className={styles.heroSubtitle}>
+            Discover our latest thoughts on architecture, sustainable building, and the future of construction.
+          </p>
+        </div>
+      </section>
+
+      <main className={styles.mainContent}>
+        <div className={styles.grid}>
+          {blogData.map((item) => (
+            <BlogCard key={item.id} item={item} />
+          ))}
+        </div>
+      </main>
     </div>
   );
 };
+
 export default Blog;
