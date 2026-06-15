@@ -64,7 +64,7 @@
 }
 
 .card:hover .title {
-  color: #059669;
+  color: #25b60f;
 }
 
 .desc {
@@ -90,7 +90,7 @@
   align-items: center;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #059669;
+  color: #25b60f;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   transition: opacity 0.3s ease;

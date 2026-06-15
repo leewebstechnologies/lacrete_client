@@ -1,7 +1,7 @@
 .blog {
   min-height: 100vh;
   background-color: #fafafa;
-  color: #111827;
+  color: #25b60f;
   font-family: system-ui, -apple-system, sans-serif;
 }
 
@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: #0f172a;
+  background: #25b60f;
 }
 
 .heroImage {
@@ -42,6 +42,7 @@
   letter-spacing: -0.03em;
   margin-bottom: 1.5rem;
   background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -91,4 +92,4 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-}
+}
